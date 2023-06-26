@@ -9,22 +9,31 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## Qu'est - ce que R ? 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Développé par **Ross Lhaka** et **Robert Gentleman** à l'université d'Auckland, en Nouvelle-Zélande dans les années 1990, R est d'abord un langage de programmation et un environnement logiciel "Open source".  Il a été conçu pour l'**analyse statistique , la manipulation des données et la visualisation**. L'appelation **"Open source"** désigne un logiciel ou un programme dont la conception,le code source et les droits de distribution sont ouverts et accessibles à tous. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+A cet effet, R dispose d'une grande communauté d'utilisateurs. EN naviguant sur le web , vous trouverez des forums, des listes de diffusion, ou encore des groupes dédiées à R dans lesquels vous trouverez réponse à la plupart de vos inquiétudes. 
+
+De plus, R est largement utilisé dans le monde universitaire et dans le monde de la recherche là où on fait beaucoup appel à des préceptes statistiques. 
+
+## Pourquoi R ?
+
+Il existe pluisieurs langages de programmation des plus simples au plus complexe. Pourquoi alors le choix d'écrire un livre sur R ? 
+Il y'a des années maintenant que j'ai pour ambition d'initier un public non initié aux concetps de l'Analytics. Cependant, R est le langage qui se rapproche le plus des fomules **Excel** que nous utilisons depuis le collège. C'est pour cette raison pédagogique et linéaire que mon choix porte sur R d'autant plus que c'est le prmier langage que j'ai appris durant mes années de licence. 
+
+## Que contient ce livre ?
+Ce livre a l'avantage d'être concis et à la fois. Il comprendra 7 chapitres allant de l'installation de R Studio, aux utilisations avancées de R à savoir la création des fonctions, l'utlisation des boucles en passant par l'analyse statistique et la visualisation des données. 
+
+Comme je le disais en Introduction, R est un logiciel open source. Durant le déroulé de ce livre, nous utiliserons principalement des "Packages" , c'est à dire des bibliothèques conçues par la communauté et regroupant plusieurs fonctionnalités. 
+
+## Chapitre 1: Installation et Configuration de R
+
+
+
 
 ```{r cars}
 summary(cars)
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
