@@ -50,15 +50,21 @@ R dispose d'un IDE spécifique appelé **Rstudio**. Vous pouvez également éxé
 Pour télécharger l'IDE Rstudio , rendez-vous sur le site officiel de Rsudio (https://www.rstudio.com/). Cliquez sur **Download RStudio** et choisissez votre système d'exploitation. Puis installez Rstudio en suivant les instructions d'installation spécifiques à votre système d'exploitation.  
 
 ### Première prise en main: Hello word!!  
+Une fois R et Rstudio installés , lancez R ou Rstudio. Tapez une commande basique du type *print('Hello Word')* dans la console. Si ceci s'exécute sans message d'erreur. Alors votre installation est correcte. 
 
-
-
-
-
-
-
-```{r cars}
-summary(cars)
+```{r Hello word}
+print("Hello word")
 ```
 
+### Présentation de l'environnement RStudio  
+L'interface de Rstudio se présente en 4 blocs à savoir :  
+- Bloc 1:  L'éditeur de texte  
 
+- Bloc 2:  La console/Le terminal  
+
+- Bloc 3:  L'environnement  
+
+- Bloc 4: Liste des dossiers/Packages/Visualisation des graphes/Aide  
+
+
+![interface de Rstudio](interface Rstudio.png)
