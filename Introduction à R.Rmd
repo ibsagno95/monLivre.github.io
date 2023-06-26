@@ -29,6 +29,31 @@ Comme je le disais en Introduction, R est un logiciel open source. Durant le dé
 
 ## Chapitre 1: Installation et Configuration de R
 
+Vous pouvez installer **R** sur les principales distributions à savoir Windows, macOS, et Linux.  
+
+### Téléchargement de R:
+Pour télécharger le programme d'installation de R, rendez-vous sur le site officiel du [projet R](https://www.r-project.org/).  
+- Cliquez sur le lien de téléchargement correspondant à votre système d'exploitation (Windows, macOS, Linux).  
+- Choisissez un miroir de téléchargement proche de votre emplacement géographique en cliquant sur le lien [CRAN](https://cran.r-project.org/mirrors.html). Le lien vers la France est disponible [ici](https://pbil.univ-lyon1.fr/CRAN/).  
+- Téléchargez le fichier d'installation de R correspondant à votre système d'exploitation.  
+
+### Installation de R  
+
+- Exécuter le fichier d'installation téléchargé  
+- Suivez les instructions de l'assisstant d'installation pour configurer R sur votre système d'exploitation.  
+- Choississez votre repertoire d'installation et les options de configuration selon vos préférences.  
+
+### Configuration de l'environnement de développement intégré (IDE Studio)  
+un IDE fourni un ensemble d'outils , d'éditeurs de code, de débogueurs , de consoles et d'autres fonctionnalités pour aider les utilisateurs à écrire, tester et déployer leur code de manière plus éfficace. Un IDE à l'avantage d'être ludique et permet l'autocomplétion des commandes écrites. 
+
+R dispose d'un IDE spécifique appelé **Rstudio**. Vous pouvez également éxécuter du code R sur divers autres IDE comme Notepad++, VScode, etc.  
+Pour télécharger l'IDE Rstudio , rendez-vous sur le site officiel de Rsudio (https://www.rstudio.com/). Cliquez sur **Download RStudio** et choisissez votre système d'exploitation. Puis installez Rstudio en suivant les instructions d'installation spécifiques à votre système d'exploitation.  
+
+### Première prise en main: Hello word!!  
+
+
+
+
 
 
 
