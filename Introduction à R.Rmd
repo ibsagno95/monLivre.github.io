@@ -2,7 +2,15 @@
 title: "Introduction à R"
 author: "ibrahima SAGNO"
 date: "2023-06-26"
-output: html_document
+output:
+  html_document:
+    toc: true
+   # toc_depth: 3
+    #number_sections: true
+  pdf_document:
+       toc: true
+  word_document:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
@@ -33,6 +41,7 @@ Vous pouvez installer **R** sur les principales distributions à savoir Windows,
 
 ### Téléchargement de R:
 Pour télécharger le programme d'installation de R, rendez-vous sur le site officiel du [projet R](https://www.r-project.org/).  
+
 - Cliquez sur le lien de téléchargement correspondant à votre système d'exploitation (Windows, macOS, Linux).  
 - Choisissez un miroir de téléchargement proche de votre emplacement géographique en cliquant sur le lien [CRAN](https://cran.r-project.org/mirrors.html). Le lien vers la France est disponible [ici](https://pbil.univ-lyon1.fr/CRAN/).  
 - Téléchargez le fichier d'installation de R correspondant à votre système d'exploitation.  
@@ -58,13 +67,101 @@ print("Hello word")
 
 ### Présentation de l'environnement RStudio  
 L'interface de Rstudio se présente en 4 blocs à savoir :  
-- Bloc 1:  L'éditeur de texte  
 
-- Bloc 2:  La console/Le terminal  
+- Bloc 1:  L'éditeur de texte  
+Le Bloc 1 permet d'écrire votre code **R** de façon propre, lisible. Elle permet de garder une trace de votre script.
+
+- Bloc 2:  La console  
+La console permet d'éxécuter votre script R. Un message d'erreur s'affichera lorsque votre code contient des erreurs.
 
 - Bloc 3:  L'environnement  
+Le bloc 3 permet de stocker vos variables crées lors d'une session R. Elle donne également un aperçu de toutes les données importées ou crées.
 
-- Bloc 4: Liste des dossiers/Packages/Visualisation des graphes/Aide  
+- Bloc 4: Liste des dossiers/Packages/Visualisation des graphes/Aide    
+Le Bloc 4 permet tout d'abord de naviguer dans les dossiers de votre ordinateur à travers l'onglet **Files**. l'onglet **Packages** de ce bloc donne la liste de tous les packages disponibles sur votre version de R.Dès lors, vous pouvez choisir de les installer pour une utilisation future.  
+L'onglet **Plot** permet une visualisation des graphiques que vous affichez. Et enfin **Help** est l'aide native de R. Elle donne une documentation complète de toutes les fonctions disponibles sous R.
 
+![interface de Rstudio](interface Rstudio.png)  
 
-![interface de Rstudio](interface Rstudio.png)
+## Bases de R et langage native 
+Lorsqu'on apprend une nouvelle langue , nous sommes excités à l'idée de pouvoir employer les. mots appris. Tel est le cas pour tout langage de programmation. Le logiciel ne comprend que la langue qui lui est dédié. Donc si vous ne voulez pas voir votre console pleine de "messages d'erreur", vous avez intérêt à écrire dans une langue dans laquelle elle comprend.  
+
+Vous allez donc apprendre à écrire vos premières lignes de code.  
+
+### Syntaxe de base  
+Les syntaxes de base de R sont très simples. Nous avons:  
+1. L'assignation de valeurs à une variable  
+Pour assigner une valeur à une variable , on donne un nom à la variable et on lui "attribue" la valeur que l'on souhaite. La règle à retenir est de ne pas laisser d'espace dans le nom de votre variable. Par exemple, <span style="color:red">"Ma variable"</span> n'est pas un nom de variable valide mais <span style="color:#006400">"Ma_variable"</span> si.  
+
+Par exemple , si on veut assigner la valeur 5 à une variable "nombre" , on écrira:   
+```{r assignatation variable}
+nombre <- 5
+#ou 
+nombre = 5
+```
+
+2. Affichafe des résultats  
+Pour afficher les résultats ou le contenu d'une variable , il suffit de saisir simplement le nom de la variable ou de le précéder de la fonction **print** .  
+```{r affichage de la variable}
+nombre
+#ou
+print(nombre)
+```
+3. Les commentaires  
+Lorsqu'on écrit du code , nous mettons des commentaires pour faciliter la compréhension de notre script. Ces commentaires ne sont pas éxécuter par la console. Pour écrire un texte en commentaire , il suffit de le précéder du symbole **#**.
+```{r}
+#Ceci est un commentaire
+```
+4.  Les opérateurs mathématiques
+Comme sur une calculatrice, R prend en charge toutes les opérations mathématiques à savoir l'addition (+), la multiplication (x), la soustraction (-), la division (/) et la puissance (^).  
+```{r}
+#SUpposons les variables a et b telles que:
+a <- 20
+b <- 3
+#Alors:
+c <- a + b   #Additon
+d <- a - b   # Soustraction
+e <- a * b   # Multiplication
+f <- a / b   # Division
+g <- a ^ b   # Puissance
+i <- a %% b # a modulo b ou le reste de la division de a par b
+
+```
+A noter qu'il est possible de réliser les opérations mathématiques les plus complexes:  
+```{r}
+#Supposons la variabe a telle que:
+a <- 5
+#Alors
+b <- log(a)   #logarithme néperien (ln) de a 
+c <- log10(a) #logarithme à base 10 de a 
+d <- exp(a)   #Exponentielle de a
+e <- sqrt(a)  #Racine carrée de a
+```
+##  Les types de variables en R  
+Lorsqu'on manipule des données, la première chose à faire est de se rassurer de leur types. R dispose de plusiers types de données que nous allons découvrir ensemble.  
+1. Numeric  
+2. Integer  
+3. Character  
+4. Logical  
+
+## Les structures de données en R
+1. Les vecteurs    
+2. Les matrices  
+3. Les listes  
+4. Les Factors
+5. Les Data frames  
+
+## Manipulation des données avec R  
+### Importation des données R  
+### Exploration des données  
+### Manipulation des données
+### Statistiques descriptives avec R
+### Netoyage des données  
+
+##  Visualisation des données avec R  
+### Introduction aux graphiques de base  
+### Graphiques avancés avec ggplot2  
+
+## Programmation avancées avec R  
+### Les boucles
+### Les fonctions
