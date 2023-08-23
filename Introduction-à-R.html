@@ -617,11 +617,35 @@ e &lt;- sqrt(a)  #Racine carrée de a</code></pre>
 <h2>Les types de variables en R</h2>
 <p>Lorsqu’on manipule des données, la première chose à faire est de se
 rassurer de leur types. R dispose de plusiers types de données que nous
-allons découvrir ensemble.<br />
-1. Numeric<br />
-2. Integer<br />
-3. Character<br />
-4. Logical</p>
+allons découvrir ensemble.</p>
+<ol style="list-style-type: decimal">
+<li><p>Numeric<br />
+Par <strong>Numeric</strong>, il faut comprendre l’ensemble des nombres
+écris avec une décimale. Exemple <strong>4.233, 6.40</strong>,
+etc.</p></li>
+<li><p>Integer<br />
+Le type <strong>Integer</strong> désigne l’ensemble des entiers naturels
+(nombres sans aucune décimale). Exemple: 4,9,5,etc.</p></li>
+<li><p>Character<br />
+Le type <strong>Charater</strong> désigne l’ensemble des caractères ou
+chaines de caractères. Un caractère désignera ici une lettre par exemple
+<strong>“M”</strong>, ,<strong>“F”</strong>, et une chaine de cractère
+désignera un mot par exemple <strong>“Bonjour”</strong>,
+<strong>“Male”</strong>,<strong>“Femelle”</strong>. A noter que les
+caratères ou les chaines de caractères sont compris par le langage en
+les écrivant entre guillements (” “).</p></li>
+<li><p>Logical<br />
+Le type <strong>Logical</strong> , (<em>Logique</em>) en français
+désigne le Vrai/Faux , Oui/Non ou encore 0/1. C’est à dire des variables
+qui n’ont que deux issues possibles. Ceci s’exprime dans le langage par
+<strong>TRUE/FALSE</strong>.</p></li>
+</ol>
+<p>Pour trouver le type d’une variable on écrit la commande
+<strong>type</strong> suivi du nom de la variable.</p>
+<pre class="r"><code># Numeric
+num1 &lt;- 233020
+typeof(num1)</code></pre>
+<pre><code>## [1] &quot;double&quot;</code></pre>
 </div>
 <div id="les-structures-de-données-en-r" class="section level2">
 <h2>Les structures de données en R</h2>

@@ -13,6 +13,8 @@ output:
     toc: true
 ---
 
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -139,10 +141,28 @@ e <- sqrt(a)  #Racine carrée de a
 ```
 ##  Les types de variables en R  
 Lorsqu'on manipule des données, la première chose à faire est de se rassurer de leur types. R dispose de plusiers types de données que nous allons découvrir ensemble.  
+
 1. Numeric  
+Par **Numeric**, il faut comprendre l'ensemble des nombres écris avec une décimale. 
+Exemple **4.233, 6.40**, etc.  
+
 2. Integer  
+Le type **Integer** désigne l'ensemble des entiers naturels (nombres sans aucune décimale). Exemple: 4,9,5,etc.  
+
 3. Character  
+Le type **Charater** désigne l'ensemble des caractères ou  chaines de caractères. Un caractère désignera ici une lettre  par exemple  **"M"**, ,**"F"**, et une chaine de cractère désignera un mot par exemple **"Bonjour"**, **"Male"**,**"Femelle"**. A noter que les caratères ou les chaines de caractères sont compris par le langage en les écrivant entre guillements (" ").  
+
 4. Logical  
+Le type **Logical** , (*Logique*) en français désigne le Vrai/Faux , Oui/Non ou encore 0/1. C'est à dire des variables qui n'ont que deux issues possibles. Ceci s'exprime dans le langage par **TRUE/FALSE**.  
+
+Pour trouver le type d'une variable on écrit la commande **type** suivi du nom de la variable.  
+```{r Type_variables}
+# Numeric
+num1 <- 233020
+typeof(num1)
+```
+
+ 
 
 ## Les structures de données en R
 1. Les vecteurs    

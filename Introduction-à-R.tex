@@ -110,6 +110,10 @@
 \begin{document}
 \maketitle
 
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
 \hypertarget{quest---ce-que-r}{%
 \subsection{Qu'est - ce que R ?}\label{quest---ce-que-r}}
 
@@ -168,15 +172,22 @@ savoir Windows, macOS, et Linux.
 \subsubsection{Téléchargement de R:}\label{tuxe9luxe9chargement-de-r}}
 
 Pour télécharger le programme d'installation de R, rendez-vous sur le
-site officiel du \href{https://www.r-project.org/}{projet R}.\\
-- Cliquez sur le lien de téléchargement correspondant à votre système
-d'exploitation (Windows, macOS, Linux).\\
-- Choisissez un miroir de téléchargement proche de votre emplacement
-géographique en cliquant sur le lien
-\href{https://cran.r-project.org/mirrors.html}{CRAN}. Le lien vers la
-France est disponible \href{https://pbil.univ-lyon1.fr/CRAN/}{ici}.\\
-- Téléchargez le fichier d'installation de R correspondant à votre
-système d'exploitation.
+site officiel du \href{https://www.r-project.org/}{projet R}.
+
+\begin{itemize}
+\tightlist
+\item
+  Cliquez sur le lien de téléchargement correspondant à votre système
+  d'exploitation (Windows, macOS, Linux).\\
+\item
+  Choisissez un miroir de téléchargement proche de votre emplacement
+  géographique en cliquant sur le lien
+  \href{https://cran.r-project.org/mirrors.html}{CRAN}. Le lien vers la
+  France est disponible \href{https://pbil.univ-lyon1.fr/CRAN/}{ici}.\\
+\item
+  Téléchargez le fichier d'installation de R correspondant à votre
+  système d'exploitation.
+\end{itemize}
 
 \hypertarget{installation-de-r}{%
 \subsubsection{Installation de R}\label{installation-de-r}}
@@ -236,16 +247,33 @@ correcte.
 \subsubsection{Présentation de l'environnement
 RStudio}\label{pruxe9sentation-de-lenvironnement-rstudio}}
 
-L'interface de Rstudio se présente en 4 blocs à savoir :\\
-- Bloc 1: L'éditeur de texte
+L'interface de Rstudio se présente en 4 blocs à savoir :
 
 \begin{itemize}
 \item
-  Bloc 2: La console/Le terminal
+  Bloc 1: L'éditeur de texte\\
+  Le Bloc 1 permet d'écrire votre code \textbf{R} de façon propre,
+  lisible. Elle permet de garder une trace de votre script.
 \item
-  Bloc 3: L'environnement
+  Bloc 2: La console\\
+  La console permet d'éxécuter votre script R. Un message d'erreur
+  s'affichera lorsque votre code contient des erreurs.
 \item
-  Bloc 4: Liste des dossiers/Packages/Visualisation des graphes/Aide
+  Bloc 3: L'environnement\\
+  Le bloc 3 permet de stocker vos variables crées lors d'une session R.
+  Elle donne également un aperçu de toutes les données importées ou
+  crées.
+\item
+  Bloc 4: Liste des dossiers/Packages/Visualisation des graphes/Aide\\
+  Le Bloc 4 permet tout d'abord de naviguer dans les dossiers de votre
+  ordinateur à travers l'onglet \textbf{Files}. l'onglet
+  \textbf{Packages} de ce bloc donne la liste de tous les packages
+  disponibles sur votre version de R.Dès lors, vous pouvez choisir de
+  les installer pour une utilisation future.\\
+  L'onglet \textbf{Plot} permet une visualisation des graphiques que
+  vous affichez. Et enfin \textbf{Help} est l'aide native de R. Elle
+  donne une documentation complète de toutes les fonctions disponibles
+  sous R.
 \end{itemize}
 
 \begin{figure}
@@ -253,5 +281,207 @@ L'interface de Rstudio se présente en 4 blocs à savoir :\\
 \includegraphics{interface Rstudio.png}
 \caption{interface de Rstudio}
 \end{figure}
+
+\hypertarget{bases-de-r-et-langage-native}{%
+\subsection{Bases de R et langage
+native}\label{bases-de-r-et-langage-native}}
+
+Lorsqu'on apprend une nouvelle langue , nous sommes excités à l'idée de
+pouvoir employer les. mots appris. Tel est le cas pour tout langage de
+programmation. Le logiciel ne comprend que la langue qui lui est dédié.
+Donc si vous ne voulez pas voir votre console pleine de ``messages
+d'erreur'', vous avez intérêt à écrire dans une langue dans laquelle
+elle comprend.
+
+Vous allez donc apprendre à écrire vos premières lignes de code.
+
+\hypertarget{syntaxe-de-base}{%
+\subsubsection{Syntaxe de base}\label{syntaxe-de-base}}
+
+Les syntaxes de base de R sont très simples. Nous avons:\\
+1. L'assignation de valeurs à une variable\\
+Pour assigner une valeur à une variable , on donne un nom à la variable
+et on lui ``attribue'' la valeur que l'on souhaite. La règle à retenir
+est de ne pas laisser d'espace dans le nom de votre variable. Par
+exemple, {``Ma variable''} n'est pas un nom de variable valide mais
+{``Ma\_variable''} si.
+
+Par exemple , si on veut assigner la valeur 5 à une variable ``nombre''
+, on écrira:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{nombre }\OtherTok{\textless{}{-}} \DecValTok{5}
+\CommentTok{\#ou }
+\NormalTok{nombre }\OtherTok{=} \DecValTok{5}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  Affichafe des résultats\\
+  Pour afficher les résultats ou le contenu d'une variable , il suffit
+  de saisir simplement le nom de la variable ou de le précéder de la
+  fonction \textbf{print} .
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{nombre}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#ou}
+\FunctionTok{print}\NormalTok{(nombre)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 5
+\end{verbatim}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  Les commentaires\\
+  Lorsqu'on écrit du code , nous mettons des commentaires pour faciliter
+  la compréhension de notre script. Ces commentaires ne sont pas
+  éxécuter par la console. Pour écrire un texte en commentaire , il
+  suffit de le précéder du symbole \textbf{\#}.
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Ceci est un commentaire}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+  Les opérateurs mathématiques Comme sur une calculatrice, R prend en
+  charge toutes les opérations mathématiques à savoir l'addition (+), la
+  multiplication (x), la soustraction (-), la division (/) et la
+  puissance (\^{}).
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#SUpposons les variables a et b telles que:}
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{20}
+\NormalTok{b }\OtherTok{\textless{}{-}} \DecValTok{3}
+\CommentTok{\#Alors:}
+\NormalTok{c }\OtherTok{\textless{}{-}}\NormalTok{ a }\SpecialCharTok{+}\NormalTok{ b   }\CommentTok{\#Additon}
+\NormalTok{d }\OtherTok{\textless{}{-}}\NormalTok{ a }\SpecialCharTok{{-}}\NormalTok{ b   }\CommentTok{\# Soustraction}
+\NormalTok{e }\OtherTok{\textless{}{-}}\NormalTok{ a }\SpecialCharTok{*}\NormalTok{ b   }\CommentTok{\# Multiplication}
+\NormalTok{f }\OtherTok{\textless{}{-}}\NormalTok{ a }\SpecialCharTok{/}\NormalTok{ b   }\CommentTok{\# Division}
+\NormalTok{g }\OtherTok{\textless{}{-}}\NormalTok{ a }\SpecialCharTok{\^{}}\NormalTok{ b   }\CommentTok{\# Puissance}
+\NormalTok{i }\OtherTok{\textless{}{-}}\NormalTok{ a }\SpecialCharTok{\%\%}\NormalTok{ b }\CommentTok{\# a modulo b ou le reste de la division de a par b}
+\end{Highlighting}
+\end{Shaded}
+
+A noter qu'il est possible de réliser les opérations mathématiques les
+plus complexes:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Supposons la variabe a telle que:}
+\NormalTok{a }\OtherTok{\textless{}{-}} \DecValTok{5}
+\CommentTok{\#Alors}
+\NormalTok{b }\OtherTok{\textless{}{-}} \FunctionTok{log}\NormalTok{(a)   }\CommentTok{\#logarithme néperien (ln) de a }
+\NormalTok{c }\OtherTok{\textless{}{-}} \FunctionTok{log10}\NormalTok{(a) }\CommentTok{\#logarithme à base 10 de a }
+\NormalTok{d }\OtherTok{\textless{}{-}} \FunctionTok{exp}\NormalTok{(a)   }\CommentTok{\#Exponentielle de a}
+\NormalTok{e }\OtherTok{\textless{}{-}} \FunctionTok{sqrt}\NormalTok{(a)  }\CommentTok{\#Racine carrée de a}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{les-types-de-variables-en-r}{%
+\subsection{Les types de variables en
+R}\label{les-types-de-variables-en-r}}
+
+Lorsqu'on manipule des données, la première chose à faire est de se
+rassurer de leur types. R dispose de plusiers types de données que nous
+allons découvrir ensemble.\\
+1. Numeric\\
+2. Integer\\
+3. Character\\
+4. Logical
+
+\hypertarget{les-structures-de-donnuxe9es-en-r}{%
+\subsection{Les structures de données en
+R}\label{les-structures-de-donnuxe9es-en-r}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Les vecteurs\\
+\item
+  Les matrices\\
+\item
+  Les listes\\
+\item
+  Les Factors
+\item
+  Les Data frames
+\end{enumerate}
+
+\hypertarget{manipulation-des-donnuxe9es-avec-r}{%
+\subsection{Manipulation des données avec
+R}\label{manipulation-des-donnuxe9es-avec-r}}
+
+\hypertarget{importation-des-donnuxe9es-r}{%
+\subsubsection{Importation des données
+R}\label{importation-des-donnuxe9es-r}}
+
+\hypertarget{exploration-des-donnuxe9es}{%
+\subsubsection{Exploration des
+données}\label{exploration-des-donnuxe9es}}
+
+\hypertarget{manipulation-des-donnuxe9es}{%
+\subsubsection{Manipulation des
+données}\label{manipulation-des-donnuxe9es}}
+
+\hypertarget{statistiques-descriptives-avec-r}{%
+\subsubsection{Statistiques descriptives avec
+R}\label{statistiques-descriptives-avec-r}}
+
+\hypertarget{netoyage-des-donnuxe9es}{%
+\subsubsection{Netoyage des données}\label{netoyage-des-donnuxe9es}}
+
+\hypertarget{visualisation-des-donnuxe9es-avec-r}{%
+\subsection{Visualisation des données avec
+R}\label{visualisation-des-donnuxe9es-avec-r}}
+
+\hypertarget{introduction-aux-graphiques-de-base}{%
+\subsubsection{Introduction aux graphiques de
+base}\label{introduction-aux-graphiques-de-base}}
+
+\hypertarget{graphiques-avancuxe9s-avec-ggplot2}{%
+\subsubsection{Graphiques avancés avec
+ggplot2}\label{graphiques-avancuxe9s-avec-ggplot2}}
+
+\hypertarget{programmation-avancuxe9es-avec-r}{%
+\subsection{Programmation avancées avec
+R}\label{programmation-avancuxe9es-avec-r}}
+
+\hypertarget{les-boucles}{%
+\subsubsection{Les boucles}\label{les-boucles}}
+
+\hypertarget{les-fonctions}{%
+\subsubsection{Les fonctions}\label{les-fonctions}}
 
 \end{document}
